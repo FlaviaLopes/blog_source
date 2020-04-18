@@ -3,7 +3,6 @@ Date: 01-04-2020 21:50
 Modified: 01-04-2020 21:51
 Category: python, web, pelican
 Tags: github pages, static content
-Status: published
 Thumb: images/thumbnails/thumbnail_post/lua.jpeg
 Authors: Flávia Lopes
 Summary: Lorem ipsum dolor si amet. Lorem ipsum dolor si amet.  Lorem ipsum dolor si amet. Lorem ipsum dolor si amet.Lorem ipsum dolor si amet. Lorem ipsum dolor si amet. Lorem ipsum dolor si amet. Lorem ipsum dolor si amet. Lorem ipsum dolor si amet. Lorem ipsum dolor si amet. Lorem ipsum dolor si amet. Lorem ipsum dolor si amet.
