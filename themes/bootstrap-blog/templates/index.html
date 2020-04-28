@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+
+{% block navbar %}
+    {% include 'includes/navbar.html' %}
+{% endblock %}
+
+{% block container %}
+    {% if SWITCH_TEMPLATE == 2 %}
+        {#two-column#}
+        {% include 'includes/main-presentation/two-columns.html' %}
+    {% else %}
+        {% if SWITCH_TEMPLATE == 3 %}
+            {#three-column#}
+            {% include 'includes/main-presentation/three-columns.html' %}
+        {% else %}
+            {% if SWITCH_TEMPLATE == 4 %}
+                {#four-column#}
+                {% include 'includes/main-presentation/four-columns.html' %}
+            {% else %}
+                {% if SWITCH_TEMPLATE == 5 %}
+                    {#featured-posts#}
+                    {% include 'includes/main-presentation/featured-posts.html' %}
+                {% else %}
+                    {% if SWITCH_TEMPLATE == 6 %}
+                        {#full-width#}
+                        {% include 'includes/main-presentation/full-width.html' %}
+                    {% else %}
+                        {#one-column is default#}
+                        {% include 'includes/main-presentation/one-column.html' %}
+                    {% endif %}
+                {% endif %}
+            {% endif %}
+        {% endif %}
+    {% endif %}
+{% endblock %}
+
+{#{% block newsletter %}
+    {% include 'includes/newsletter.html' %}
+{% endblock %}#}
+
+{#{% block instagram %}
+    {% include 'includes/instagram.html' %}
+{% endblock %}#}
+
+{% block footer %}
+    {% include 'includes/footer.html' %}
+{% endblock %}
+
+<script src="js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<article class="card mb-4">
+    <header class="card-header">
+        <div class="card-meta">
+            {% set period_archive = '/'.join(article.url.split('/')[0:3]) %}
+            <a href="{{ SITEURL }}/{{ period_archive }}">
+                <time class="timeago" datetime="{{ article.date|strftime('%d/%m/%Y') }}">
+                    {{ article.date|strftime('%d') }}
+                    de {{ article.date|strftime('%b') }}, {{ article.date|strftime('%Y') }}
+                </time>
+            </a> em <strong><a href="{{ SITEURL }}/{{ article.category.url }}">{{ article.category|title }}</a></strong>
+            {% for sub in article.subcategories %}
+                <i aria-hidden="true" class="site-icon-folder-open"></i>
+                <a href="{{ SITEURL }}/{{ sub.url }}" rel="tag nofollow">{{ sub.shortname }}</a>
+                {{ ', ' if not loop.last }}
+            {% endfor %}
+        </div>
+        <a href="{{ SITEURL }}/{{ article.url }}">
+            <h4 class="card-title">{{ article.title }}</h4>
+        </a>
+    </header>
+    <a href="{{ SITEURL }}/{{ article.url }}">
+        <img class="card-img"
+             src="{% if article.thumb %} {{ SITEURL }}/{{ article.thumb }} {% else %} {{ SITEURL }}/{{ avatarblog }} {% endif %}"
+             alt=""/>
+    </a>
+    <div class="card-body">
+        <p class="card-text">{{ article.summary }}</p>
+    </div>
+</article>

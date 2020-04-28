@@ -1,0 +1,15 @@
+<ul class="nav justify-content-center">
+
+    {% for title,url in SOCIAL %}
+        <li class="nav-item">
+            <a class="nav-link" href="{{ url }}" target="_blank">
+                <img class="social-icon" src="{{ SITEURL }}/theme/images/{{ title }}-128.png" style="width: 64px;">
+            </a>
+        </li>
+    {% endfor %}
+</ul>
+<div class="copy">
+    &copy; Tema: <a class="card-link" href="https://milo.bootlab.io/" target="_blank    ">Milo 2020</a><br/>
+    Modificado por <a class="card-link" href="{{ SITEURL }}/pages/flavia-lopes.html">Flávia Lopes</a><br/>
+    All rights reserved
+</div>

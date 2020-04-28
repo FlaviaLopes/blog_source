@@ -3,6 +3,11 @@
 from __future__ import unicode_literals
 
 AUTHOR = 'Flávia Lopes'
+AUTHOR_CARD = {
+    'title': 'Back-end Developer',
+    'text': 'Interessada em Ciência de Dados, Código limpo, TDD, Python'
+}
+
 SITENAME = 'Flávia Lopes .Dev'
 SITEURL = ''
 RELATIVE_URLS = True
@@ -26,7 +31,11 @@ DATE_FORMATS = {
 'pt': ('pt_BR','%a, %d %B %Y'),
 }
 DEFAULT_DATE = 'fs'
-THEME = 'themes/ops-modified'
+THEME = 'themes/bootstrap-blog'
+
+#how posts are displayed on home: {1: one-column, 2: two-column, 3: three-column, 4: four-column, 5: featured-posts, 6: full-width}
+SWITCH_TEMPLATE = 1
+
 STATIC_PATHS = [
     #'extra/robots.txt',
     'images',
@@ -59,7 +68,7 @@ MONTH_ARCHIVE_SAVE_AS = 'posts/{date:%Y}/{date:%b}/index.html'
 
 # Quando True as categorias são geradas conforme a organização das pastas
 USE_FOLDER_AS_CATEGORY = True
-SUMMARY_MAX_LENGTH = 35
+SUMMARY_MAX_LENGTH = 20
 
 GITHUB_URL = 'http://github.com/FlaviaLopes/'
 GOOGLE_ANALYTICS = ''
@@ -84,6 +93,7 @@ SOCIAL = (('twitter', 'https://twitter.com/_flavialopes_'),
 # global metadata to all the contents
 DEFAULT_METADATA = {
     'status': 'draft',
+    'featured': False,
     'favicon': 'images/favicon.ico',
     'avatarblog': 'images/thumbnails/thumbnail_post/avatar.jpg'
 }
