@@ -5,7 +5,7 @@ from datetime import date
 
 AUTHOR = 'Flávia Lopes'
 SITENAME = 'Flávia Lopes .Dev'
-SITEURL = ''
+SITEURL = 'https://flavialopes.dev'
 CURRENTYEAR = date.today().year
 RELATIVE_URLS = True
 PATH = 'content'
@@ -16,8 +16,6 @@ SITETITLE = 'Flávia Lopes'
 SITEDESCRIPTION = 'Site pessoal e divulgação de projetos.'
 BLOGKEYWORDS = ['python', 'python developer', 'web', 'pelican', 'github pages' 'data science', 'github', 'portfolio']
 GITHUB_URL = 'http://github.com/FlaviaLopes/'
-GOOGLE_ANALYTICS = 'https://www.googletagmanager.com/gtag/js?id=UA-163781706-1'
-TWITTER_USERNAME = '_flavialopes_'
 
 # ----DATA---------------------------------------------------------------------------------------------------------#
 
@@ -33,7 +31,7 @@ CURRICULUM = 'https://linkedin.com/in/lopesflavia'
 TITLE = 'Bem-Vind@'
 INTRODUCTION = '''
 Olá, sou a Flávia. Desenvolvo soluções usando tecnologias. Uso Python como linguagem principal e atualmente estou me aperfeiçoando em Cloud Computing, Ciência de Dados.
-Este site portfolio foi desenvolvido usando CSS, HTML e Python. Está hospedado no Github Pages. Exatamente, esta é uma página estática gerada utilizando o Pelican, um gerador de páginas estáticas escrito em Python.
+Este site portfolio foi desenvolvido usando CSS, HTML e Python. Está hospedado no Github Pages. Exatamente, esta é uma página estática gerada utilizando o Pelican, um gerador de páginas estáticas escrito em Python. 
 No card ao lado você pode ter acesso às minhas redes e currículo, abaixo você pode verificar alguns projetos meus publicados no GitHub.
 '''
 PROJECTS = [
@@ -61,23 +59,16 @@ PROJECTS = [
 
 SOCIALSHARE = (
     ('twitter',
-     'https://twitter.com/intent/tweet?text={}&url={}{}{}'.format(
-         INTRODUCTION,
-         SITEURL,
-         TWITTER_USERNAME,
-         ', '.join([f'{"".join(it.split())}' for it in BLOGKEYWORDS]))
+     'https://twitter.com/share?text={}&url={}&hashtags={}'.format(
+         INTRODUCTION[:170].strip(),
+         SITEURL.strip(),
+         ','.join([f'{"".join(it.split())}' for it in BLOGKEYWORDS])
+     )
      ),
-    ('facebook', 'https://www.facebook.com/sharer/sharer.php?u={}'.format(SITEURL)),
-    ('linkedin',
-     'https://www.linkedin.com/shareArticle?mini=true&url={}&title={}&summary={}&source={}'.format(
-         SITEURL,
-         SITETITLE,
-         SITEDESCRIPTION[:50],
-         SITEURL)
-     ),
+    ('facebook', 'https://www.facebook.com/sharer/sharer.php?u=#{}'.format(SITEURL)),
+    ('linkedin', 'https://www.linkedin.com/sharing/share-offsite/?url={}'.format(SITEURL)),
     ('whatsapp', 'https://api.whatsapp.com/send?text={}'.format(SITEURL)),
 )
-
 ### fim adicionado ###
 
 ### adicionado ###
