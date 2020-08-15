@@ -1,0 +1,36 @@
+<aside class="widget clearfix widget_card">
+    <div class="site-card bg-primary text-center">
+        <!-- Foto Avatar-->
+        <div class="site-card-avatar">
+            <span class="site-avatar-state">
+                <span class="site-avatar-state1">
+                    <img class="avatar avatar-195" alt=""
+                         src="{{SITEURL}}/{{DEFAULT_METADATA.avatarblog}}"
+                         srcset="">
+                </span>
+            </span>
+        </div>
+        <!-- nome, título avatar-->
+        <div class="site-card-info clear-mrg">
+            <h2 class="text-upper">{{ OCCUPATION }}</h2>
+            <p class="text-muted">{{ INTERESTS }}</p>
+            <!-- redes sociais -->
+            <ul class="site-social clear-list">
+                {% for social, social_link in SOCIAL %}
+                <li><a target="_blank" href="{{ social_link }}"><span
+                        class="site-icon site-icon-{{ social }}"></span></a>
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+</aside>
+<!--download resume -->
+<aside class="widget clearfix widget_text">
+    <div class="textwidget"><p></p>
+        <center>
+            <a class="btn btn-lg btn-default" target="_blank" href="{{ CURRICULUM }}">DOWNLOAD CV</a>
+        </center>
+        <p></p>
+    </div>
+</aside>

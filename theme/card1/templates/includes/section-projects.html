@@ -1,0 +1,30 @@
+<div>
+    <div class="pf-grid">
+        <div class="pf-grid-sizer"></div>
+        {% for project in PROJECTS %}
+            <article class="pf-grid-item">
+                <a class="pf-project" href="{{ project['link'] }}">
+                    <figure class="pf-figure">
+                        <img width="380" height="253"
+                             src="{{SITEURL}}/images/selo.png"
+                             alt=""
+                             srcset=""
+                             sizes="(max-width: 380px) 100vw, 380px">
+                    </figure>
+                    <div class="pf-caption text-center">
+                        <div class="valign-table">
+                            <div class="valign-cell">
+                                <h2 class="pf-title text-upper">{{ project['name']|title }}</h2>
+                                <div class="pf-text clear-mrg">
+                                    <div data-url="{{ project['link'] }}"></div>
+                                    <p>{{ project['desc'] }}</p>
+                                    <div data-url="{{ project['link'] }}"></div>
+                                    <p></p></div>
+                                <span class="pf-btn btn btn-primary">Saiba Mais</span></div>
+                        </div>
+                    </div>
+                </a>
+            </article>
+        {% endfor %}
+    </div>
+</div>

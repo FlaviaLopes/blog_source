@@ -1,7 +1,5 @@
 HOWTO
 deploy
-pelican-plugins
-pelican-themes
 *.pid
 output
 *.pyc
