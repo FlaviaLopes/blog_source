@@ -19,7 +19,7 @@ GITHUB_URL = 'http://github.com/FlaviaLopes/'
 
 # ----DATA---------------------------------------------------------------------------------------------------------#
 
-OCCUPATION = 'Back-end Developer'
+OCCUPATION = 'Python Developer'
 INTERESTS = 'Interessada em Ciência de Dados, Código limpo, Python, Cloud Computing'
 SOCIAL = (('twitter', 'https://twitter.com/_flavialopes_'),
           ('linkedin', 'https://linkedin.com/in/lopesflavia'),
@@ -65,7 +65,7 @@ SOCIALSHARE = (
          ','.join([f'{"".join(it.split())}' for it in BLOGKEYWORDS])
      )
      ),
-    ('facebook', 'https://www.facebook.com/sharer/sharer.php?u=#{}'.format(SITEURL)),
+    ('facebook', 'https://www.facebook.com/sharer/sharer.php?u={}'.format(SITEURL)),
     ('linkedin', 'https://www.linkedin.com/sharing/share-offsite/?url={}'.format(SITEURL)),
     ('whatsapp', 'https://api.whatsapp.com/send?text={}'.format(SITEURL)),
 )
