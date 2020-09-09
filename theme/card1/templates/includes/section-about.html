@@ -1,25 +1,24 @@
-<div class="site-paper-layers site-animate">
+<div class="site-paper-layers">
     <div class="site-paper clear-mrg clearfix">
         <div class="site-paper-cont paper-padd clear-mrg">
             <section id="about" class="section padd-box">
                 <div class="row">
                     <div class="col-sm-12 clear-mrg text-box">
-                        <h2 class="title-lg text-upper">{{SITETITLE}}</h2>
+                        <h2 class="title-lg text-upper">{{ SITETITLE }}</h2>
                         {% set introduction = INTRODUCTION.split('\n') %}
                         {% for it in introduction %}
-                        <p>{{it}}</p>
+                            <p>{{ it }}</p>
                         {% endfor %}
                         <div class="share-box text-left clearfix">
                             <div class="share-box">
                                 <div class="share-art">
                                     <section>
-                                        <p id="post-share-links">
+                                        <p>
                                             {% for social, url in SOCIALSHARE %}
-                                            <a class="share-btn btn btn-bordered btn-upper"
-                                               href="{{url}}"
-                                               target="_blank"
-                                               title="Share on {{social|title}}"><i class="site-icon-{{social}}"></i>
-                                            </a>
+                                                <a class="share-btn btn btn-bordered btn-upper"
+                                                   href="{{ url }}" title="Share on {{ social|title }}">
+                                                    <i class="site-icon-{{ social }}"></i>
+                                                </a>
                                             {% endfor %}
                                         </p>
                                     </section>

@@ -1,8 +1,6 @@
 <!DOCTYPE html>
-<html lang="pt">
+<html lang="{{ DEFAULT_LANG }}">
 <head>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="{{ GOOGLE_ANALYTICS }}"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
 
@@ -15,36 +13,32 @@
         gtag('config', 'UA-163781706-1');
     </script>
     <base target="_blank">
-
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-
-    <meta property="og:url" content="{{SITEURL}}"/>
+    <meta property="og:url" content="{{ SITEURL }}"/>
     <meta property="og:type" content="website"/>
-    <meta property="og:title" content="{{SITETITLE}}"/>
-    <meta property="og:description" content="{{SITEDESCRIPTION}}"/>
-    <meta property="og:image" content="{{SITEURL}}/images/avatar.jpg"/>
+    <meta property="og:title" content="{{ SITETITLE }}"/>
+    <meta property="og:description" content="{{ SITEDESCRIPTION }}"/>
+    <meta property="og:image" content="{{ SITEURL }}/{{ DEFAULT_METADATA.avatar }}"/>
     <meta property="og:site_name" content="{{ SITENAME }}">
 
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="{{SITEDESCRIPTION}}">
-    <meta name="author" content="{{AUTHOR}}">
-    <meta name="keywords" content="{{ BLOGKEYWORDS }}" >
+    <!-- Mobile Specific Meta -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <meta name="description" content="{{ SITEDESCRIPTION }}">
+    <meta name="author" content="{{ AUTHOR }}">
+    <meta name="keywords" content="{{ BLOGKEYWORDS }}">
 
     <link href="{{ SITEURL }}/{{ DEFAULT_METADATA.favicon }}" rel="icon" type="image/x-icon">
     <title>{% block title %} {{ SITENAME }}{% endblock %}</title>
-    <link rel="stylesheet" type="text/css" href="{{ SITEURL }}/theme/css/icons.css" media="all">
-    <link rel="stylesheet" type="text/css" href="{{ SITEURL }}/theme/css/more.css" media="all">
     <link rel="stylesheet" type="text/css" href="{{ SITEURL }}/theme/css/style.css" media="all">
-
 </head>
 
-<body class="site site-layers-1 site-nav-on site-nav-type2 site-main-nav-on site-side-box-on site-sidebar-on"
-      data-color="#c0e3e7">
+<body class="site-nav-on site-nav-type2 site-side-box-on site-sidebar-on" data-color="#c0e3e7">
 
 <div>
-    <header id="siteHeader" class="site-logo-in">
-        {% block site_header %}
+    <header id="siteHeader">
+        {% block header %}
         {% endblock %}
     </header>
     <div id="siteContainer" class="site-container">
@@ -53,7 +47,7 @@
             <div id="siteSideBox" class="clear-mrg">
                 <div class="site-side-box-1 clear-mrg">
                     <!--card à esquerda -->
-                    {% block aside_avatar %}
+                    {% block aside %}
                     {% endblock %}
                 </div>
             </div>
@@ -61,10 +55,10 @@
 
         <!-- conteúdo do meio, principal -->
         <div class="site-container-sm">
-            {% block section_about %}
+            {% block about %}
             {% endblock %}
 
-            {% block section_projects %}
+            {% block projects %}
             {% endblock %}
         </div>
     </div>

@@ -5,7 +5,7 @@
             <span class="site-avatar-state">
                 <span class="site-avatar-state1">
                     <img class="avatar avatar-195" alt=""
-                         src="{{SITEURL}}/{{DEFAULT_METADATA.avatarblog}}"
+                         src="{{ SITEURL }}/{{ DEFAULT_METADATA.avatar }}"
                          srcset="">
                 </span>
             </span>
@@ -17,20 +17,21 @@
             <!-- redes sociais -->
             <ul class="site-social clear-list">
                 {% for social, social_link in SOCIAL %}
-                <li><a target="_blank" href="{{ social_link }}"><span
-                        class="site-icon site-icon-{{ social }}"></span></a>
-                </li>
+                    <li><a target="_blank" href="{{ social_link }}"><span
+                            class="site-icon site-icon-{{ social }}"></span></a>
+                    </li>
                 {% endfor %}
             </ul>
         </div>
     </div>
 </aside>
+
 <!--download resume -->
 <aside class="widget clearfix widget_text">
     <div class="textwidget"><p></p>
-        <center>
+        <div class="text-center">
             <a class="btn btn-lg btn-default" target="_blank" href="{{ CURRICULUM }}">DOWNLOAD CV</a>
-        </center>
+        </div>
         <p></p>
     </div>
 </aside>
