@@ -30,8 +30,8 @@ DEFAULT_LANG = 'pt-br'
 
 # global metadata to all the contents
 DEFAULT_METADATA = {
-    'favicon': 'images/favicon.ico',
-    'avatar': 'images/avatar.png'
+    'favicon': 'images/ico.ico',
+    'avatar': 'images/tea.jpg'
 }
 # Dados de redes sociais
 GITHUB_URL = 'http://github.com/FlaviaLopes/'
