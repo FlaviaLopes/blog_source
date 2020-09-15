@@ -80,8 +80,8 @@ body {
     padding: 0;
     margin: 0;
     min-height: 100%;
-    font-family: 'Quicksand', sans-serif;
-    background-color: #e8f0f3;
+    font-family: 'Anonymous Pro', monospace;
+    background-color: #283e4ae3;
 }
 
 *, :after, :before {
@@ -1444,6 +1444,10 @@ blockquote.aligncenter, img.aligncenter {
     margin-bottom: 30px
 }
 
+#about {
+    font-size: 15pt;
+}
+
 .site-head-inner {
     position: static;
     padding-top: 20px;
@@ -2165,11 +2169,11 @@ blockquote.aligncenter, img.aligncenter {
 }
 
 mark, .bg-primary, .btn-primary, .togglebox-header:before, .accordion-header:before {
-    background-color: #25A4DB;
+    background-color: #db8425ed;
 }
 
 .btn-bordered, .brd-primary {
-    border-color: #25A4DB;
+    border-color: #db8425ed;
 }
 
 .site-card, .btn-primary, accordion-header, .togglebox-header {
@@ -2191,7 +2195,7 @@ mark, .bg-primary, .btn-primary, .togglebox-header:before, .accordion-header:bef
 
 
 .btn-default {
-    background-color: #25A4DB;
+    background-color: #db8425ed;
     color: #000;
 }
 
