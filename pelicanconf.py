@@ -22,6 +22,15 @@ DEPLOY_PATH = 'deploy'
 DELETE_OUTPUT_DIRECTORY = True
 OUTPUT_RETENTION = ['.git']
 THEME = 'theme/card1'
+STATIC_PATHS = [
+    'images',
+    'pages']
+
+PAGE_URL = 'pages/{slug}.html'
+PAGE_SAVE_AS = 'pages/{slug}.html'
+PAGE_LANG_URL = 'pages/{slug}-{lang}.html'
+PAGE_LANG_SAVE_AS = 'pages/{slug}-{lang}.html'
+DISPLAY_PAGES_ON_MENU = True
 LOAD_CONTENT_CACHE = False
 # code blocks with line numbers
 PYGMENTS_RST_OPTIONS = {'linenos': 'table'}
