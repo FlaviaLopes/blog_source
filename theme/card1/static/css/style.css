@@ -31,6 +31,14 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 
 footer {
     padding: 20px 0;
+    background: white;
+    height: 6rem;
+    color: #010101;
+    box-shadow: -4px 3px 15px 15px rgba(0, 0, 0, .2);
+    bottom: 0;
+    width: 100%;
+    overflow: hidden;
+    z-index: 999;
 }
 
 a, pre {
@@ -81,7 +89,7 @@ body {
     margin: 0;
     min-height: 100%;
     font-family: 'Anonymous Pro', monospace;
-    background-color: #283e4ae3;
+    background-color: #0f84923b;
 }
 
 *, :after, :before {
@@ -441,6 +449,22 @@ img, select[multiple] {
 .site-icon-list-col3:after {
     display: block;
     clear: both
+}
+
+.site-icon-portfolio:before {
+    content: "\e902"
+}
+
+.site-icon-experience:before {
+    content: "\e903"
+}
+
+.site-icon-blog:before {
+    content: "\e905"
+}
+
+.site-icon-pencil:before {
+    content: "\f040"
 }
 
 .clearfix:after, .dl-horizontal dd:after, .row:after {
@@ -1496,6 +1520,77 @@ blockquote.aligncenter, img.aligncenter {
     transition: all 350ms ease-out
 }
 
+#siteContainer {
+    margin-top: 6rem;
+    padding-bottom: 6rem;
+}
+
+/*Header*/
+#siteHeader {
+    box-shadow: -4px 7px 15px 1px rgba(0, 0, 0, .2);
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 6rem;
+    z-index: 1030;
+    background: white;
+    margin-bottom: 40px;
+    color: #010101;
+}
+
+/*Nav*/
+
+#siteMainNav {
+    font-size: 1.4em;
+    line-height: 1em
+}
+
+#siteMainNav ul {
+    margin: 0;
+    padding: 0
+}
+
+#siteMainNav a, #siteMainNav li {
+    position: relative
+}
+
+#siteMainNav > ul {
+    margin: 0 -15px
+}
+
+#siteMainNav > ul > li {
+    padding: 10px 0;
+    margin: 0 15px;
+    display: inline-block
+}
+
+#siteMainNav > ul > li > a {
+    font-size: 1.133em;
+    font-weight: 700
+}
+
+#siteMainNav > ul > li > .sub-menu {
+    top: 100%;
+    left: -41px;
+    right: auto
+}
+
+#siteMainNav .menu-item-has-children > a {
+    padding-right: 15px
+}
+
+#siteMainNav .menu-item-has-children > a:after {
+    content: "\f0d7";
+    color: inherit;
+    font-size: .8em;
+    font-family: icomoon;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    margin-top: -.5em
+}
+
 #siteMainNav .sub-menu {
     top: 0;
     right: 100%;
@@ -1514,12 +1609,228 @@ blockquote.aligncenter, img.aligncenter {
     transition: all 450ms cubic-bezier(.23, 1, .32, 1) 0s
 }
 
-.widget-title, .widget_calendar caption, .widget_calendar td, .widget_calendar th {
+#siteNavSm, #siteNavWrap, .widget-title, .widget_calendar caption, .widget_calendar td, .widget_calendar th {
     text-align: center
 }
 
-#siteSideBox {
-    transition: top .3s ease-out
+#siteMainNav .sub-menu li {
+    margin: 8px 0
+}
+
+#siteMainNav .sub-menu a {
+    padding: 7px 25px;
+    display: block;
+    white-space: nowrap;
+    border-radius: 20px
+}
+
+#siteMainNav .sub-menu .menu-item-has-children > a:after {
+    right: 15px
+}
+
+#siteMainNav li:hover > .sub-menu {
+    opacity: 1;
+    visibility: visible;
+    -webkit-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0)
+}
+
+#siteMainNavSm {
+    margin-bottom: 20px
+}
+
+#siteMainNavSm ul {
+    padding: 0
+}
+
+#siteMainNavSm li {
+    position: relative
+}
+
+#siteMainNavSm > ul > li {
+    padding: 7px 5px
+}
+
+#siteMainNavSm > ul > li > a {
+    font-size: 1.188em;
+    font-weight: 700
+}
+
+#siteMainNavSm .menu-item-has-children > a {
+    padding-right: 20px;
+    position: relative
+}
+
+#siteMainNavSm .menu-item-has-children > a:after {
+    content: "\f0d7";
+    color: inherit;
+    font-size: .8em;
+    font-family: icomoon;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    margin-top: -.6em
+}
+
+#siteMainNavSm .menu-item-has-children .menu-item-has-children > a:after {
+    margin-top: -.9em
+}
+
+#siteMainNavSm .sub-menu {
+    position: relative;
+    display: none;
+    margin-top: 8px
+}
+
+#siteMainNavSm .sub-menu:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+    opacity: .1
+}
+
+.site-nav-type1 .site-nav-btm, .site-nav-type1 .site-nav-btm:after, .site-tooltip:after, .site-tooltip:before {
+    content: ''
+}
+
+#siteMainNavSm .sub-menu li:last-child {
+    padding-bottom: 0
+}
+
+#siteMainNavSm .sub-menu a {
+    font-size: .938em;
+    display: inline-block;
+    margin: 5px 0
+}
+
+#siteMainNavSm .sub-menu .sub-menu {
+    margin-top: 0
+}
+
+#siteMainNavSm .sub-menu .sub-menu:before {
+    display: none
+}
+
+.site-nav a {
+    display: block;
+    position: relative
+}
+
+#siteNavSm {
+    width: 100%;
+    padding: 5px;
+    position: relative;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch
+}
+
+#siteNavSm .site-avatar, #siteNavSm ul {
+    display: inline-block;
+    vertical-align: middle
+}
+
+#siteNavSm .site-avatar {
+    padding: 0 10px 0 17px
+}
+
+#siteNavSm li {
+    padding: 0 5px;
+    display: inline-block;
+    vertical-align: middle
+}
+
+#siteNavSm li a {
+    padding: 3px 10px;
+    border-bottom: 3px solid transparent
+}
+
+#siteNavSm li .site-icon {
+    font-size: 34px;
+    line-height: 42px
+}
+
+#siteNavWrap {
+    float: right;
+    right: 1px;
+    z-index: 4;
+    width: 56px;
+    position: relative
+}
+
+#siteNavWrap .site-nav ul {
+    z-index: 1;
+    position: relative
+}
+
+#siteNavWrap .site-nav .site-nav-img, #siteNavWrap .site-nav li {
+    padding: 10px 0;
+    position: relative
+}
+
+#siteNavWrap .site-nav a {
+    height: 42px;
+    line-height: 42px
+}
+
+#siteNavWrap .site-nav .current a, #siteNavWrap .site-nav a:hover {
+    opacity: .5
+}
+
+#siteNavWrap .site-nav .menu-item-object-category.current-menu-item a:hover, #siteNavWrap .site-nav .menu-item-object-page.current-menu-item a:hover, #siteNavWrap .site-nav .menu-item-object-post.current-menu-item a:hover {
+    opacity: 1
+}
+
+#siteNavWrap .site-nav .site-icon {
+    font-size: 28px;
+    line-height: 42px
+}
+
+#siteNavWrap .site-nav .site-icon, #siteNavWrap .site-nav img {
+    display: inline-block;
+    vertical-align: top
+}
+
+#siteNavScroll {
+    overflow-y: auto;
+    overflow-x: hidden
+}
+
+#siteNavScroll .mCSB_scrollTools {
+    visibility: hidden !important
+}
+
+#siteNavTools {
+    font-size: 22px;
+    padding-top: 10px
+}
+
+#siteNavTools .site-icon {
+    display: block
+}
+
+#siteMainNav .sub-menu {
+    top: 0;
+    right: 100%;
+    position: absolute;
+    padding: 13px 16px;
+    z-index: 999;
+    text-align: left;
+    min-width: 200px;
+    border-radius: 6px;
+    box-shadow: 0 0 17px 1px rgba(0, 0, 0, .19);
+    visibility: hidden;
+    opacity: 0;
+    -webkit-transform: translateY(50px);
+    -ms-transform: translateY(50px);
+    transform: translateY(50px);
+    transition: all 450ms cubic-bezier(.23, 1, .32, 1) 0s
 }
 
 .site-nav-type1 .site-nav-btm, .site-nav-type1 .site-nav-btm:after, .site-tooltip:after, .site-tooltip:before {
@@ -1531,10 +1842,6 @@ blockquote.aligncenter, img.aligncenter {
     position: relative
 }
 
-.site-nav .avatar {
-    background-color: #30cc81;
-}
-
 #siteNavTools {
     font-size: 22px;
     padding-top: 10px
@@ -1542,6 +1849,51 @@ blockquote.aligncenter, img.aligncenter {
 
 #siteNavTools .site-icon {
     display: block
+}
+
+.site-nav-type1 #siteNav, .site-nav-type1 #siteNavTools {
+    padding-right: 10px
+}
+
+.site-nav-type1 .site-nav-btm {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 0;
+    border-bottom: 20px solid transparent;
+    border-left: 56px solid transparent;
+    z-index: 0
+}
+
+.site-nav-type1 .site-nav-btm:after {
+    position: absolute;
+    left: -57px;
+    bottom: -11px;
+    width: 59px;
+    height: 1px;
+    -webkit-transform: rotate(-20deg);
+    -ms-transform: rotate(-20deg);
+    transform: rotate(-20deg);
+    z-index: 1
+}
+
+.site-nav-type1 .site-nav-cont {
+    border-width: 1px 1px 0 0;
+    border-style: solid;
+    padding: 5px 0
+}
+
+.site-nav-type2 #siteNav, .site-nav-type2 #siteNavTools {
+    padding-left: 10px
+}
+
+.widget-title, .widget_calendar caption, .widget_calendar td, .widget_calendar th {
+    text-align: center
+}
+
+#siteSideBox {
+    transition: top .3s ease-out
 }
 
 .site-tooltip {
@@ -1596,43 +1948,6 @@ blockquote.aligncenter, img.aligncenter {
 .site-tooltip.arrow-right:before {
     right: -5px;
     border-left: 5px solid transparent
-}
-
-.site-nav-type1 #siteNav, .site-nav-type1 #siteNavTools {
-    padding-right: 10px
-}
-
-.site-nav-type1 .site-nav-btm {
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 0;
-    height: 0;
-    border-bottom: 20px solid transparent;
-    border-left: 56px solid transparent;
-    z-index: 0
-}
-
-.site-nav-type1 .site-nav-btm:after {
-    position: absolute;
-    left: -57px;
-    bottom: -11px;
-    width: 59px;
-    height: 1px;
-    -webkit-transform: rotate(-20deg);
-    -ms-transform: rotate(-20deg);
-    transform: rotate(-20deg);
-    z-index: 1
-}
-
-.site-nav-type1 .site-nav-cont {
-    border-width: 1px 1px 0 0;
-    border-style: solid;
-    padding: 5px 0
-}
-
-.site-nav-type2 #siteNav, .site-nav-type2 #siteNavTools {
-    padding-left: 10px
 }
 
 #siteSideBox .widget {
@@ -1879,22 +2194,31 @@ blockquote.aligncenter, img.aligncenter {
 }
 
 .pf-figure {
-    z-index: 1
+    z-index: 1;
+    height: 280px;
+    max-height: 280px;
+    background-color: #db8425b0;
+    padding: 1rem;
 }
 
 .pf-figure img {
-    width: 100%;
-    max-width: 380px;
-    display: block
+    width: auto;
+    display: block;
+    margin: auto;
+}
+
+.pf-figure figcaption {
+    margin-top: 2rem;
 }
 
 .pf-caption {
-    color: rgba(177, 66, 58, 1);
+    color: #010101;
     z-index: 2;
     opacity: 0;
     position: absolute;
-    background: rgba(37, 164, 219, 1);
-    transition: opacity .3s ease-in-out, visibility .3s ease-in-out
+    background: #c0e3e7;
+    transition: opacity .3s ease-in-out, visibility .3s ease-in-out;
+    height: 280px;
 }
 
 .pf-text, .post-nav-next a:hover, .post-nav-prev a:hover {
@@ -2169,7 +2493,7 @@ blockquote.aligncenter, img.aligncenter {
 }
 
 mark, .bg-primary, .btn-primary, .togglebox-header:before, .accordion-header:before {
-    background-color: #db8425ed;
+    background-color: #db8425b0;
 }
 
 .btn-bordered, .brd-primary {
@@ -2195,7 +2519,7 @@ mark, .bg-primary, .btn-primary, .togglebox-header:before, .accordion-header:bef
 
 
 .btn-default {
-    background-color: #db8425ed;
+    background-color: #db8425b0;
     color: #000;
 }
 
@@ -2639,6 +2963,12 @@ mark, .bg-primary, .btn-primary, .togglebox-header:before, .accordion-header:bef
     #siteSidebarBtn .site-icon {
         line-height: 1
     }
+
+    footer {
+        background: #ffffff;
+        color: #010101;
+    }
+
 }
 
 @media (min-width: 992px) {

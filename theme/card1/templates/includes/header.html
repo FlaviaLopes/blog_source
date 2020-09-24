@@ -1,6 +1,39 @@
 <div class="site-head-inner site-container">
     <div class="site-container-sm">
         <div class="site-head-row">
+            <!-- Menu top -->
+            <div id="siteHeadCol2" class="site-head-col text-right">
+                <div class="site-nav-container site-container hidden-sm hidden-xs">
+                    <nav id="siteMainNav">
+                        <ul class="clear-list">
+                            <li class="menu-item">
+                                <a href="{{ SITEURL }}">Home</a>
+                            </li>
+                            {% for page in pages %}
+                                <li class="menu-item">
+                                    <a href="{{SITEURL}}/{{ page.url }}">{{ page.title }}</a>
+                                </li>
+                            {% endfor %}
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            <!-- menu principal (aparece no topo) - somente em mídias pequenas -->
+            <nav id="siteNavSm" class="site-nav hidden-lg hidden-md">
+                <div class="site-avatar">
+                    <a href="{{ SITEURL }}" data-tooltip="Home">
+                        <img class="avatar avatar-42" alt=""
+                             src="{{ SITEURL }}/{{ DEFAULT_METADATA.avatar }}">
+                    </a>
+                </div>
+                <ul class="clear-list">
+                    <li class="menu-item">
+                        <a href="{{ SITEURL }}/pages/projetos.html" data-tooltip="Projetos">
+                            <span class="site-icon site-icon-portfolio"></span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
         </div>
     </div>
 </div>
