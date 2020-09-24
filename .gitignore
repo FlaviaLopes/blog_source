@@ -4,3 +4,5 @@ deploy
 output
 *.pyc
 .idea
+
+venv/

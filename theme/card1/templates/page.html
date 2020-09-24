@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block title %} {{ page.title }} {% endblock %}
+
+{% block header %} {% include 'includes/header.html' %} {% endblock %}
+
+{% block aside %} {% include 'includes/aside-avatar.html' %} {% endblock %}
+
+{% block page %}
+<div>
+    <div class="clear-mrg clearfix">
+        <div class="site-paper-cont paper-padd clear-mrg">
+            <section class="section padd-box">
+                <div class="row text-center">
+                    <div class="col-sm-12 clear-mrg text-box">
+                        <h2 class="title-lg text-upper">{{ page.title }}</h2>
+                        {{ page.content }}
+                    </div>
+                    {% if page.title == 'Projetos' %}
+                        {% include 'includes/projects.html' %}
+                    {% endif %}
+                </div>
+            </section>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block footer %} {% include  'includes/footer.html' %} {% endblock %}
